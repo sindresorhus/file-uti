@@ -1,0 +1,37 @@
+{
+	"name": "file-uti",
+	"version": "0.0.0",
+	"description": "Get the UTI (Uniform Type Identifier) of a file on macOS",
+	"license": "MIT",
+	"repository": "sindresorhus/file-uti",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"uti",
+		"file",
+		"macos",
+		"mac",
+		"uniform",
+		"type",
+		"identifier",
+		"id",
+		"filepath",
+		"mime"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
+}
