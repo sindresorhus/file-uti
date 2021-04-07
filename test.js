@@ -1,12 +1,12 @@
 import test from 'ava';
-import m from '.';
+import {fileUtiAsync, fileUtiSync} from './index.js';
 
 test('async', async t => {
-	t.is(await m('index.js'), 'com.netscape.javascript-source');
-	t.is(await m('readme.md'), 'net.daringfireball.markdown');
+	t.is(await fileUtiAsync('index.js'), 'com.netscape.javascript-source');
+	t.is(await fileUtiAsync('readme.md'), 'net.daringfireball.markdown');
 });
 
 test('sync', t => {
-	t.is(m.sync('index.js'), 'com.netscape.javascript-source');
-	t.is(m.sync('readme.md'), 'net.daringfireball.markdown');
+	t.is(fileUtiSync('index.js'), 'com.netscape.javascript-source');
+	t.is(fileUtiSync('readme.md'), 'net.daringfireball.markdown');
 });

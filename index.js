@@ -1,12 +1,13 @@
-'use strict';
-const util = require('util');
-const childProcess = require('child_process');
+import {promisify} from 'util';
+import childProcess from 'child_process';
 
-const execFileP = util.promisify(childProcess.execFile);
+const execFileP = promisify(childProcess.execFile);
 
-module.exports = async filePath => {
+export async function fileUtiAsync(filePath) {
 	const {stdout} = await execFileP('mdls', ['-raw', '-name', 'kMDItemContentType', filePath]);
 	return stdout.trim();
-};
+}
 
-module.exports.sync = filePath => childProcess.execFileSync('mdls', ['-raw', '-name', 'kMDItemContentType', filePath], {encoding: 'utf8'}).trim();
+export function fileUtiSync(filePath) {
+	return childProcess.execFileSync('mdls', ['-raw', '-name', 'kMDItemContentType', filePath], {encoding: 'utf8'}).trim();
+}
