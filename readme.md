@@ -11,15 +11,15 @@ $ npm install file-uti
 ## Usage
 
 ```js
-import {fileUtiAsync} from 'file-uti';
+import {fileUti} from 'file-uti';
 
-console.log(await fileUtiAsync('index.js'));
+console.log(await fileUti('index.js'));
 //=> 'com.netscape.javascript-source'
 ```
 
 ## API
 
-### fileUtiAsync(filePath)
+### fileUti(filePath)
 
 Returns a `Promise<string>` with the UTI.
 

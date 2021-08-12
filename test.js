@@ -1,9 +1,9 @@
 import test from 'ava';
-import {fileUtiAsync, fileUtiSync} from './index.js';
+import {fileUti, fileUtiSync} from './index.js';
 
 test('async', async t => {
-	t.is(await fileUtiAsync('index.js'), 'com.netscape.javascript-source');
-	t.is(await fileUtiAsync('readme.md'), 'net.daringfireball.markdown');
+	t.is(await fileUti('index.js'), 'com.netscape.javascript-source');
+	t.is(await fileUti('readme.md'), 'net.daringfireball.markdown');
 });
 
 test('sync', t => {

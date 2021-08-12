@@ -3,7 +3,7 @@ import childProcess from 'child_process';
 
 const execFileP = promisify(childProcess.execFile);
 
-export async function fileUtiAsync(filePath) {
+export async function fileUti(filePath) {
 	const {stdout} = await execFileP('mdls', ['-raw', '-name', 'kMDItemContentType', filePath]);
 	return stdout.trim();
 }
