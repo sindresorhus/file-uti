@@ -9,5 +9,8 @@ export async function fileUti(filePath) {
 }
 
 export function fileUtiSync(filePath) {
-	return childProcess.execFileSync('mdls', ['-raw', '-name', 'kMDItemContentType', filePath], {encoding: 'utf8'}).trim();
+	return childProcess.execFileSync('mdls', ['-raw', '-name', 'kMDItemContentType', filePath], {
+		encoding: 'utf8',
+		stdio: ['ignore', 'pipe', 'ignore']
+	}).trim();
 }
