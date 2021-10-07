@@ -1,6 +1,6 @@
 {
 	"name": "file-uti",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "Get the UTI (Uniform Type Identifier) of a file on macOS",
 	"license": "MIT",
 	"repository": "sindresorhus/file-uti",
